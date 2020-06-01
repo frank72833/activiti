@@ -1,30 +1,31 @@
-package com.fns.activiti.process;
+package com.fns.activiti.holiday;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
-@Data
+@Slf4j
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Data
 @Entity
 @Table
-public class Applicant {
+public class Holiday {
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
-    private String name;
-    private String email;
-    private String phoneNumber;
+    private String userId;
+
+    private Date startDate;
+    private Date endDate;
 }
