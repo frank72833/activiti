@@ -33,8 +33,12 @@ class ProcessResourceTest {
 
     @Test
     public void givenProcess_whenStartProcess_thenIncreaseInProcessInstanceCount() throws Exception {
-        ProcessRequest req = ProcessRequest.builder().name("name").build();
-        String responseBody = this.mockMvc.perform(post("/api/v1/processes/test")
+        ProcessRequest req = ProcessRequest.builder()
+                .applicantName("Fran Test")
+                .email("fran@test.com")
+                .phoneNumber("123456")
+                .build();
+        String responseBody = this.mockMvc.perform(post("/api/v1/processes/hire")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(req))
         )

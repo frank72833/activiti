@@ -12,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class ProcessResponse {
+    private String processInstanceId;
     private String id;
     private String name;
     private String tenantId;

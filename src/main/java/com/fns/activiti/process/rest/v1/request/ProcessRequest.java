@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProcessRequest {
-    private String name;
+    private String applicantName;
+    private String email;
+    private String phoneNumber;
 }

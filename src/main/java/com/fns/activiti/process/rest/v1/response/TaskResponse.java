@@ -13,4 +13,5 @@ public class TaskResponse {
     private String id;
     private String name;
     private String processInstanceId;
+    private String description;
 }
